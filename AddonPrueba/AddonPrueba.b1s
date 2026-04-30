@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Archivo de definicion del addon para SAP Business One.
+  Se empaqueta junto con el .exe dentro del ZIP para el Extension Manager.
+
+  Para registrar mediante el Extension Manager de SAP B1 10.0:
+    1. Comprimir este archivo + AddonPrueba.exe en un ZIP (ver Build-Package.ps1).
+    2. Ir a SAP B1 -> Administracion -> Extension Manager.
+    3. Importar el ZIP y asignarlo a la(s) sociedad(es).
+    4. SAP B1 lanzara AddonPrueba.exe automaticamente al abrir la empresa.
+-->
+<B1Package>
+  <Addon>
+    <Name>AddonPrueba</Name>
+    <Description>Descuento automatico del 15% en Pedidos de Venta para articulos cuyo codigo comienza con TEST</Description>
+    <Version>1.0.0</Version>
+    <GUID>{3F8A1C7D-2B4E-4F9A-8C5D-6E7F8A9B0C1D}</GUID>
+    <Platform>x64</Platform>
+    <SBOVersion>10.0</SBOVersion>
+    <StartupInfo>
+      <Executable>AddonPrueba.exe</Executable>
+      <CommandLine></CommandLine>
+      <CloseCommand></CloseCommand>
+    </StartupInfo>
+    <AddonInfo>
+      <Type>Single</Type>
+      <KeepIniFile>No</KeepIniFile>
+    </AddonInfo>
+  </Addon>
+</B1Package>
