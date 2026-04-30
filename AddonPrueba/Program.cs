@@ -6,7 +6,7 @@ namespace AddonPrueba
     static class Program
     {
         /// <summary>
-        /// SAP Business One lanza el addon pasando la cadena de conexion como primer argumento.
+        /// SAP Business One lanza el addon pasando la cadena de conexión como primer argumento.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
@@ -20,7 +20,7 @@ namespace AddonPrueba
             {
                 MessageBox.Show(
                     "AddonPrueba debe ser iniciado desde SAP Business One.\n" +
-                    "No se encontro cadena de conexion en los argumentos.",
+                    "No se encontró cadena de conexión en los argumentos.",
                     "AddonPrueba",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);

@@ -13,7 +13,7 @@ namespace AddonPrueba
         // Tipo de formulario para Pedido de Venta (Sales Order) en SAP B1
         private const string SALES_ORDER_FORM_TYPE = "139";
 
-        // UID del matriz de lineas de documento en el Pedido de Venta
+        // UID de la matriz de líneas de documento en el Pedido de Venta
         private const string LINES_MATRIX_UID = "38";
 
         // UIDs de columnas en la matriz de lineas
@@ -68,7 +68,7 @@ namespace AddonPrueba
             }
         }
 
-        // Cierre automatico cuando SAP B1 se apaga
+        // Cierre automático cuando SAP B1 se apaga
         private void OnAppEvent(BoAppEventTypes eventType)
         {
             if (eventType == BoAppEventTypes.aet_ShutDown)
@@ -79,8 +79,8 @@ namespace AddonPrueba
 
         /// <summary>
         /// Escucha todos los ItemEvents de SAP B1.
-        /// Detecta cuando el usuario termina de ingresar un articulo en la
-        /// linea del Pedido de Venta y aplica el descuento si corresponde.
+        /// Detecta cuando el usuario termina de ingresar un artículo en la
+        /// línea del Pedido de Venta y aplica el descuento si corresponde.
         /// </summary>
         private void OnItemEvent(
             string FormUID,
@@ -124,7 +124,7 @@ namespace AddonPrueba
 
         /// <summary>
         /// Lee el ItemCode de la fila indicada.
-        /// Si comienza con "TEST" (sin distincion de mayusculas) aplica 15% de descuento.
+        /// Si comienza con "TEST" (sin distinción de mayúsculas) aplica 15% de descuento.
         /// </summary>
         private void ApplyDiscountIfTestItem(string formUID, int row)
         {
